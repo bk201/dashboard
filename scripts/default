@@ -1,0 +1,9 @@
+#!/bin/bash
+set -ex
+
+cd $(dirname $0)
+
+
+yarn --pure-lockfile install 
+RANCHER_ENV=harvester API=$HARVESTER_API yarn dev
+
